@@ -1,17 +1,16 @@
 // Example material data
 const materials = {
   notes: [
-    { name: "Physics - Chapter 1", file: "materials/physics-ch1.pdf" },
-    { name: "Chemistry - Atomic Structure", file: "materials/chemistry-atomic.pdf" }
+   { name: "Mathematics formulas", file: "https://drive.google.com/file/d/1TOLxpXAEkLOS6-_aVX4XjmlRbExEkWE9/view" }
   ],
   homework: [
-    { name: "Maths Homework - Algebra", file: "materials/maths-homework.pdf" }
+    
   ],
   papers: [
-    { name: "Science Past Paper 2023", file: "materials/science-paper-2023.pdf" }
+  
   ],
   assignments: [
-    { name: "Geography Map Work", file: "materials/geography-map.pdf" }
+   
   ]
 };
 
