@@ -1,0 +1,149 @@
+/* Discord-like Theme Colors */
+:root {
+    --bg-dark: #2f3136;
+    --bg-darker: #23272a;
+    --bg-light: #36393f;
+    --accent: #5865f2;
+    --text: #dcddde;
+    --text-bright: #fff;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text);
+    display: flex;
+    height: 100vh;
+}
+
+/* Layout */
+.app {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: var(--bg-darker);
+    display: flex;
+    flex-direction: column;
+}
+
+.server-name {
+    background: var(--accent);
+    padding: 16px;
+    color: var(--text-bright);
+    font-weight: bold;
+    text-align: center;
+}
+
+.channels {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.channel {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    color: var(--text);
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.channel:hover {
+    background: var(--bg-light);
+}
+
+.channel.active {
+    background: var(--bg-light);
+    color: var(--text-bright);
+}
+
+/* Chat Area */
+.chat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-light);
+}
+
+.chat-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--bg-dark);
+    font-size: 18px;
+    color: var(--text-bright);
+}
+
+.messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 12px;
+}
+
+.message .user {
+    font-weight: bold;
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.message p {
+    display: inline;
+}
+
+/* Message Input */
+.message-input {
+    display: flex;
+    padding: 12px;
+    background: var(--bg-darker);
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+    background: var(--bg-light);
+    color: var(--text);
+}
+
+.message-input input:focus {
+    outline: 2px solid var(--accent);
+}
+
+.message-input button {
+    background: var(--accent);
+    color: var(--text-bright);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.message-input button:hover {
+    background: #4752c4;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
