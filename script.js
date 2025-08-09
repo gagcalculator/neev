@@ -1,18 +1,18 @@
 // Example material data
 const materials = {
   notes: [
-   { name: "Mathematics formulas", file: "https://drive.google.com/file/d/1TOLxpXAEkLOS6-_aVX4XjmlRbExEkWE9/view" }
-  ],
+    { name: "Maths Formulas", file: "https://drive.google.com/file/d/1TOLxpXAEkLOS6-_aVX4XjmlRbExEkWE9/view" },
   homework: [
-    
+    { name: "Maths Homework - Algebra", file: "materials/maths-homework.pdf" }
   ],
   papers: [
-  
+    { name: "Science Past Paper 2023", file: "materials/science-paper-2023.pdf" }
   ],
   assignments: [
-   
+    { name: "Geography Map Work", file: "materials/geography-map.pdf" }
   ]
 };
+
 
 function renderMaterials(category) {
   const list = document.getElementById("materials-list");
@@ -47,7 +47,8 @@ document.getElementById("search").addEventListener("input", e => {
     div.classList.add("material");
     div.innerHTML = `
       <h3>${item.name}</h3>
-      <a href="${item.file}" download>Download</a>
+      <a href="${item.file}" target="_blank">Download</a>
+
     `;
     list.appendChild(div);
   });
